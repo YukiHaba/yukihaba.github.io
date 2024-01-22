@@ -4,6 +4,47 @@ layout: archive
 
 {{ content }}
 
+<div class="bio" style="font-size: 18px;">
+  <h2>Brief Bio</h2>
+
+  <p>
+    Thanks for visiting! I am currently a Postdoctoral Fellow at Harvard/Princeton University. I completed my Ph.D. at Princeton University, working with <a href="https://mcbridelab.princeton.edu/">Lindy McBride</a> on <a href="https://www.sciencedirect.com/science/article/pii/S0960982222001245">the evolution of a man-biting mosquito, <em>Culex pipiens</em></a>. 
+    At Princeton, I was a <a href="https://gradschool.princeton.edu/financial-support/fellowships/princeton-fellowships/centennial-fellowship-natural-sciences-and">Centennial Fellow</a> and received generous support from <a href="https://masason-foundation.org/en/">the Masason Foundation</a> and <a href="https://www.hisf.or.jp/en/">the Honjo International Scholarship Foundation</a>.
+  </p>
+  
+  <p>
+    I got my Master's at Columbia University where I truly fell in love with evolutionary biology and genomics. My thesis investigated the genomic basis of behavioral variation in a social burying beetle under the supervision of <a href="https://www.columbia.edu/~dr2497/">Dustin Rubenstein</a> and <a href="https://www.biodiv.tw/pi-Sheng-Feng_Shen">Sheng-Feng Shen</a>, which was awarded the Alfred Russel Wallace Prize for the best MA thesis.
+    I was also fortunate enough to be in the lab of <a href="https://przeworskilab.com/">Molly Przeworski</a>, studying <a href="https://elifesciences.org/articles/24133">the evolution of recombination across vertebrates</a>. 
+  </p>
+
+  <p>
+    I am originally from Tokyo, Japan. I graduated from the University of Tokyo for my undergraduate degree where I worked with <a href="https://scholar.google.com/citations?user=AU3PKTsAAAAJ&hl=en">Nobuyuki Kutsukake</a> on <a href="https://link.springer.com/article/10.1007/s10682-019-10011-6">the evolution of (eu)sociality</a> in the naked mole rat and other African rodents. 
+  </p>
+  <p>
+    I spent most of my youth chasing soccer balls, savoring ramen, and playing Nintendo games. Since moving to NYC for grad school, I've become hooked on beautiful jazz and flavorful coffee. 
+  </p>
+
+</div>
+
+<div class="research_interest" style="font-size: 18px;">
+  <h2>Research Interest</h2>
+
+  <p>I am broadly interested in why and how behaviors evolve in nature. I aim to push the boundaries in understanding the processes driving behavioral evolution (why) and the mechanistic underpinnings of behavioral variation (how). How do evolutionary forces—such as selection, drift, and gene flow—drive behavioral evolution and maintain behavioral diversity in nature? What genes, neurons, and circuits underlie behavioral variation in nature? To tackle these fundamental questions, I aspire to take an integrative approach across disciplines from behavioral ecology to computational genomics to behavioral neuroscience.</p>
+  <!-- Add more paragraphs as needed -->
+</div>
+
+<div class="CV" style="font-size: 18px;">
+  <h2>CV</h2>
+  <p>
+    Check out my full CV 
+    <a href="/assets/images/CV/Yuki Haba_CV_2023Dec.pdf" target="_blank">here</a>.
+  </p>
+  <!-- Add more paragraphs as needed -->
+</div>
+
+
+
+{% comment %}
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% if paginator %}
@@ -12,7 +53,6 @@ layout: archive
   {% assign posts = site.posts %}
 {% endif %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% for post in posts %}
     {% include archive-single.html type=entries_layout %}
@@ -20,3 +60,5 @@ layout: archive
 </div>
 
 {% include paginator.html %}
+{% endcomment %}
+
