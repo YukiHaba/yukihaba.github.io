@@ -116,9 +116,15 @@ author:
     - label: "yukihaba.github.io"
       icon: "fas fa-fw fa-link"
       url: "https://yukihaba.github.io/"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=CtY4cz4AAAAJ&hl=en"
     - label: "@YukiHaba_"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/YukiHaba_"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/yuki-haba-0022a011b/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
@@ -128,10 +134,6 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
-    - label: "Google Scholar"
-      icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=CtY4cz4AAAAJ&hl=en"
-
 # Site Footer
 footer:
   links:
