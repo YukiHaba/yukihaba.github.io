@@ -236,7 +236,6 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-polyglot
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -297,13 +296,6 @@ defaults:
       comments: # true
       share: true
       related: true
-
-
-# Polyglot configuration
-languages: ["en", "ja"]
-default_lang: "en"
-exclude_from_localization: ["assets/css", "assets/images"]
-parallel_localization: true
 
 sass:
   sourcemap: never
