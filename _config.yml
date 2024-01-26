@@ -299,3 +299,12 @@ defaults:
 
 sass:
   sourcemap: never
+
+
+## Google Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-CN7K2CR37L"
+    anonymize_ip: false # default
+
