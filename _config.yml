@@ -106,13 +106,13 @@ analytics:
 author:
   name             : "Yuki Haba"
   avatar           : "/assets/images/prof_pic_website.jpg" # path of avatar image, e.g. "/assets/images/prof_pic_website.jpg"
-  bio              : "Postdoc at Columbia/Princeton"
+  bio              : "Postdoc at Columbia Zuckerman Institute"
   location         : "🇺🇸🇯🇵"
   email            : # yhaba at princeton dot edu (redundant with the links below)
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:yhaba@princeton.edu"
+      url: "mailto:yh2778@columbia.edu"
     - label: "yukihaba.github.io"
       icon: "fas fa-fw fa-link"
       url: "https://yukihaba.github.io/"
