@@ -7,3 +7,22 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.fa-bluesky {
+    /* This tells the browser to treat the element as a block so we can set a width and height */
+    display: inline-block;
+    
+    /* Hide any text inside the element (if there is any) */
+    text-indent: -9999px;
+    overflow: hidden;
+    
+    /* Set the size of the icon */
+    width: 24px;
+    height: 24px;
+    
+    /* Set your custom image as the background */
+    background: url('/assets/images/Bluesky_Logo.png') no-repeat center center;
+    
+    /* Ensure the image scales correctly within the element */
+    background-size: contain;
+  }

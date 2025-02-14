@@ -125,6 +125,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/yuki-haba-0022a011b/"
+    - label: "Bluesky"
+      url: "https://bsky.app/profile/yukihaba.bsky.social"
+      icon: "fa-bluesky"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
@@ -134,6 +137,7 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+
 # Site Footer
 footer:
   links:
