@@ -8,6 +8,159 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+/* Dark mode variables and styles */
+:root {
+  --background-color: #fff;
+  --text-color: #333;
+  --primary-color: #7c4dff;
+  --border-color: #ccc;
+  --link-color: #7c4dff;
+}
+
+[data-theme="dark"] {
+  --background-color: #2b2b2b;
+  --text-color: #ffffff;
+  --primary-color: #64b5f6;
+  --border-color: #404040;
+  --link-color: #64b5f6;
+  
+  background-color: var(--background-color) !important;
+  color: var(--text-color);
+  
+  .masthead {
+    background-color: var(--background-color) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+  }
+  
+  .masthead__inner-wrap {
+    background-color: var(--background-color) !important;
+  }
+  
+  .site-title {
+    color: var(--text-color) !important;
+  }
+  
+  .site-title a {
+    color: var(--text-color) !important;
+  }
+  
+  .page__content {
+    background-color: var(--background-color) !important;
+    color: var(--text-color);
+  }
+  
+  .sidebar {
+    background-color: var(--background-color) !important;
+  }
+  
+  .author__avatar img {
+    border: 3px solid var(--border-color);
+  }
+  
+  .author__content {
+    color: var(--text-color);
+  }
+  
+  .author__name {
+    color: var(--text-color) !important;
+  }
+  
+  .author__name a {
+    color: var(--text-color) !important;
+  }
+  
+  .author__name a:hover {
+    color: var(--text-color) !important;
+    text-decoration: underline;
+  }
+  
+  .author__urls {
+    color: var(--text-color);
+    background-color: var(--background-color) !important;
+  }
+  
+  .author__urls-wrapper {
+    background-color: var(--background-color) !important;
+  }
+  
+  .author__urls a {
+    color: var(--link-color);
+  }
+  
+  .author__urls a:hover {
+    color: #90caf9;
+  }
+  
+  .bio h2, .CV h2, .Publications h2 {
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .bio p, .CV p, .Publications p {
+    color: var(--text-color) !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color) !important;
+    font-weight: bold;
+  }
+  
+  p {
+    color: var(--text-color) !important;
+  }
+  
+  .page__content p {
+    color: var(--text-color) !important;
+  }
+  
+  a {
+    color: var(--link-color);
+  }
+  
+  a:hover {
+    color: #90caf9;
+  }
+  
+  /* Footer styling for dark mode */
+  .page__footer {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+  }
+  
+  /* Navigation styling for dark mode */
+  .greedy-nav {
+    background: var(--background-color) !important;
+  }
+  
+  .greedy-nav a {
+    color: var(--text-color) !important;
+  }
+  
+  /* Fix for any remaining background inconsistencies */
+  .layout--single .page__related {
+    background-color: var(--background-color) !important;
+  }
+  
+  .page {
+    background-color: var(--background-color) !important;
+  }
+  
+  /* Theme toggle button styling for dark mode */
+  #theme-toggle {
+    background: var(--background-color) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+  }
+}
+
+[data-theme="light"] {
+  --background-color: #fff;
+  --text-color: #333;
+  --primary-color: #7c4dff;
+  --border-color: #ccc;
+  --link-color: #7c4dff;
+}
+
 .fa-bluesky {
     /* This tells the browser to treat the element as a block so we can set a width and height */
     display: inline-block;
