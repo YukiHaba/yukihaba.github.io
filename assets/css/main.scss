@@ -159,6 +159,21 @@ search: false
   --primary-color: #7c4dff;
   --border-color: #ccc;
   --link-color: #7c4dff;
+  
+  background-color: var(--background-color) !important;
+  color: var(--text-color);
+}
+
+/* Default light theme when no data-theme is set */
+html:not([data-theme]) {
+  --background-color: #fff;
+  --text-color: #333;
+  --primary-color: #7c4dff;
+  --border-color: #ccc;
+  --link-color: #7c4dff;
+  
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .fa-bluesky {
