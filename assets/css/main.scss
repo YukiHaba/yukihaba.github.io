@@ -98,6 +98,25 @@ html[data-theme="dark"] {
     color: #90caf9;
   }
   
+  /* Fix dark icons in author profile */
+  .author__urls a i,
+  .author__urls a .fas,
+  .author__urls a .fab,
+  .author__urls li i {
+    color: var(--text-color) !important;
+  }
+  
+  /* Specific icon fixes for all FontAwesome icons */
+  .author__urls .fa-envelope-square,
+  .author__urls .fa-link,
+  .author__urls .fa-graduation-cap,
+  .author__urls .fa-twitter-square,
+  .author__urls .fa-linkedin,
+  .author__urls .fa-bluesky,
+  .author__urls [class*="fa-"] {
+    color: var(--text-color) !important;
+  }
+  
   .bio h2, .CV h2, .Publications h2 {
     color: var(--text-color);
     font-weight: bold;
