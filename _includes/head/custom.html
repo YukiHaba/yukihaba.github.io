@@ -1,7 +1,18 @@
 <!-- start custom head snippets -->
 
+<!-- Ensure light mode default immediately -->
+<script>
+(function() {
+  const theme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <link rel="stylesheet" href="/assets/css/academicons.css">
+
+<!-- Altmetric badge script -->
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
 <!-- Theme toggle script -->
 <script src="/assets/js/theme-toggle.js"></script>
