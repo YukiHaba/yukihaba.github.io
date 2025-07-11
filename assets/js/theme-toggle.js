@@ -1,7 +1,7 @@
 // Theme Toggle Functionality
 (function() {
-  // Check for saved theme preference or default to 'light'
-  const currentTheme = localStorage.getItem('theme') || 'light';
+  // Check for saved theme preference or default to 'dark'
+  const currentTheme = localStorage.getItem('theme') || 'dark';
   
   // Apply the theme on page load
   document.documentElement.setAttribute('data-theme', currentTheme);

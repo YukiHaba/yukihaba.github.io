@@ -8,20 +8,20 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-/* Dark mode variables and styles */
+/* Dark mode variables and styles - now default */
 :root {
-  --background-color: #fff;
-  --text-color: #333;
-  --primary-color: #7c4dff;
-  --border-color: #ccc;
-  --link-color: #7c4dff;
+  --background-color: #2b2b2b;
+  --text-color: #ffffff;
+  --primary-color: #64b5f6;
+  --border-color: #404040;
+  --link-color: #64b5f6;
 }
 
-/* Explicit light mode styling */
+/* Explicit dark mode styling (default) */
 html:not([data-theme]),
-html[data-theme="light"] {
-  background-color: #fff;
-  color: #333;
+html[data-theme="dark"] {
+  background-color: #2b2b2b;
+  color: #ffffff;
 }
 
 [data-theme="dark"] {
