@@ -158,6 +158,11 @@ html[data-theme="light"] {
     border-color: var(--border-color) !important;
     color: var(--text-color) !important;
   }
+  
+  /* Dark mode logo change */
+  .site-logo img {
+    content: url('/assets/images/logo_B3.png') !important;
+  }
 }
 
 [data-theme="light"] {
