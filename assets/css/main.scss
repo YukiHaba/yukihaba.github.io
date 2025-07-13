@@ -378,3 +378,46 @@ h3 {
     margin-left: 1.2em;
   }
 }
+
+/* Japanese bio page styling - smaller font */
+.page[data-page="bio_JP"] .page__content,
+.page__content .bioJP-content {
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.bioJP-content {
+  margin-bottom: 1.2em !important;
+}
+
+.bioJP-content:last-child {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+}
+
+.bioJP-content p {
+  margin-bottom: 1.5em !important;
+  text-indent: 0 !important;
+  margin-top: 0 !important;
+}
+
+.bioJP-content p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Smaller font for Japanese bio page on mobile */
+@media (max-width: 768px) {
+  .page[data-page="bio_JP"] .page__content,
+  .page__content .bioJP-content {
+    font-size: 0.8em;
+    line-height: 1.5;
+  }
+  
+  .bioJP-content {
+    margin-bottom: 1em !important;
+  }
+  
+  .bioJP-content p {
+    margin-bottom: 1.2em !important;
+  }
+}
