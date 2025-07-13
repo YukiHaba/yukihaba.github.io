@@ -388,6 +388,7 @@ h3 {
 
 .bioJP-content {
   margin-bottom: 1.2em !important;
+  text-align: left !important;
 }
 
 .bioJP-content:last-child {
@@ -399,6 +400,11 @@ h3 {
   margin-bottom: 1.5em !important;
   text-indent: 0 !important;
   margin-top: 0 !important;
+  text-align: left !important;
+}
+
+.bioJP-content h2 {
+  text-align: center !important;
 }
 
 .bioJP-content p:last-child {
