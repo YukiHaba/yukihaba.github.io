@@ -1,9 +1,11 @@
 ---
 layout: single
-title: "羽場優紀"
 permalink: /bio_JP/
 author_profile: true
 ---
+
+<div class="bioJP-content">
+<h2 style="text-align: center; margin-top: 0; margin-bottom: 1.5em; font-size: 1.4em;">略歴</h2>
 
 <div class="bioJP-content">
 
