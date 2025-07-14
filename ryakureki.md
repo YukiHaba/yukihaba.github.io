@@ -9,13 +9,13 @@ author_profile: true
 
 <div class="bioJP-content">
 
-羽場優紀 (Ph.D.) は東京都生まれの進化生態学者。現在 コロンビア大学 ザッカーマン脳科学研究所 博士研究員及びニューヨーク科学アカデミー Leon Levy 神経科学フェロー。専門は遺伝学・進化生態学・神経科学。
+羽場優紀 (Ph.D.) は東京都生まれの進化生態学者。現在コロンビア大学ザッカーマン脳科学研究所 博士研究員及びニューヨーク科学アカデミー Leon Levy 神経科学フェロー。昆虫から哺乳類まで、多様な動物の行動の進化をゲノミクス・神経科学・行動生態学などの手法を用いて研究する。現在は真社会性を持つ哺乳類ハダカデバネズミの社会行動の遺伝・神経・進化基盤の解明に取り組む。
 
 </div>
 
 <div class="bioJP-content">
 
-麻布高校・東京大学卒後渡米。コロンビア大学修士課程、プリンストン大学博士課程 (Ph.D. in Ecology and Evolutionary Biology) 、ハーバード大学博士研究員を経て、2024年から現職。受賞歴にコロンビア大学 Alfred Russel Wallace 最優秀修士論文賞、プリンストン大学 Centennial Fellowship 特待生、孫正義育英財団奨学金第1期生、米国進化学会 Rosemary Grant Award、米国哲学協会 Lewis and Clark Field Scholarship、NY野口英世記念スカラーなど。
+麻布高校・東京大学卒後渡米。コロンビア大学修士課程、プリンストン大学博士課程 (Ph.D. in Ecology and Evolutionary Biology) 、ハーバード大学博士研究員を経て、2024年から現職。受賞歴にコロンビア大学 Alfred Russel Wallace 最優秀修士論文賞、プリンストン大学 Centennial Fellowship 特待生、孫正義育英財団奨学金第1期生、米国進化学会 Rosemary Grant Award、米国哲学協会 Lewis and Clark Field Scholarship、ニューヨーク野口英世記念スカラー等。
 
 </div>
 
