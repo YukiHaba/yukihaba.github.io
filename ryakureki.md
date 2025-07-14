@@ -15,7 +15,7 @@ author_profile: true
 
 <div class="bioJP-content">
 
-麻布高校・東京大学卒後渡米。コロンビア大学修士課程、プリンストン大学博士課程 (Ph.D. in Ecology and Evolutionary Biology) 、ハーバード大学博士研究員を経て、2024年から現職。受賞歴にコロンビア大学 Alfred Russel Wallace 最優秀修士論文賞、プリンストン大学 Centennial Fellowship 特待生、孫正義育英財団奨学金第1期生、米国進化学会 Rosemary Grant Award、米国哲学協会 Lewis and Clark Field Scholarship、他多数。
+麻布高校・東京大学卒後渡米。コロンビア大学修士課程、プリンストン大学博士課程 (Ph.D. in Ecology and Evolutionary Biology) 、ハーバード大学博士研究員を経て、2024年から現職。受賞歴にコロンビア大学 Alfred Russel Wallace 最優秀修士論文賞、プリンストン大学 Centennial Fellowship 特待生、孫正義育英財団奨学金第1期生、米国進化学会 Rosemary Grant Award、米国哲学協会 Lewis and Clark Field Scholarship、NY野口英世記念スカラーなど。
 
 </div>
 
