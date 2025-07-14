@@ -455,4 +455,28 @@ h3 {
   .author__name a {
     font-size: inherit !important;
   }
+  
+  /* Make all social media icons bigger on mobile/narrow screens */
+  .author__urls li {
+    font-size: 1em !important;
+  }
+  
+  .author__urls a i,
+  .author__urls a .fas,
+  .author__urls a .fab {
+    font-size: 1.1em !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+  
+  /* Adjust Bluesky icon to match other icons */
+  .fa-bluesky {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 1.1em !important;
+  }
+  
+  .author__urls .label {
+    font-size: 1em !important;
+  }
 }
