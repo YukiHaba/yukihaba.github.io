@@ -2,7 +2,9 @@
 main:
   - title: "CV"
     url: "/assets/images/CV/Yuki Haba_CV.pdf"
+    target: "_blank"
   - title: "Publications"
     url: "https://scholar.google.com/citations?user=CtY4cz4AAAAJ&hl=en"
+    target: "_blank"
   - title: "略歴(JP)"
     url: "/bio_JP/"

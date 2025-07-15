@@ -21,7 +21,7 @@ author_profile: true
 
 <div class="bioJP-content">
 
-米国をはじめとした海外研究留学の支援と、在外邦人の学術的なコミュニティの発展にも興味があり、2021年に米国国務省/在日米国大使館から支援を受けて一般社団法人 <a href="https://xplane.jp/" target="_blank">XPLANE</a> を共同創立。海外大学院留学の支援・情報発信・3000人を超える現役海外大学院生・志望者コミュニティの運営に関わる。また、NYを拠点とするNPO法人 <a href="https://www.friendsofutokyo.org/ja/" target="_blank">Friends of UTokyo</a> の同窓会である FUTI Aluniを立ち上げ現在も会長を務める。Friends of UTokyo 諮問委員、<a href="https://www.u-tokyo.ac.jp/150ut/ja/messages.html" target="_blank">東京大学150人委員</a>、UTokyo Affiliate (東京大学総長任命の海外展開戦略委員) を歴任。
+米国をはじめとした海外研究留学の支援と、在外邦人の学術的なコミュニティの発展にも興味があり、2021年に米国国務省/在日米国大使館から支援を受けて一般社団法人 <a href="https://xplane.jp/" target="_blank">XPLANE</a> を共同創立。海外大学院留学の支援・情報発信・3000人を超える現役海外大学院生・志望者コミュニティの運営に関わる。その他にも、NYを拠点とするNPO法人 <a href="https://www.friendsofutokyo.org/ja/" target="_blank">Friends of UTokyo</a> の諮問委員、<a href="https://www.u-tokyo.ac.jp/150ut/ja/messages.html" target="_blank">東京大学150人委員</a>、UTokyo Affiliate (東京大学総長任命の海外展開戦略委員) などを歴任。
 
 </div>
 
