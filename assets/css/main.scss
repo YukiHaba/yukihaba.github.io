@@ -359,10 +359,6 @@ h3 {
   margin-left: 1.7em; /* Align with title text, accounting for number */
 }
 
-.altmetric-inline {
-  flex-shrink: 0;
-}
-
 /* Mobile adjustments for paper listings */
 @media (max-width: 768px) {
   .paper-list {
@@ -480,3 +476,21 @@ h3 {
     font-size: 1em !important;
   }
 }
+
+/* Selected Publications styling */
+.selected-publications .pub-item {
+  color: var(--text-color) !important;
+}
+
+.selected-publications .pub-content {
+  color: var(--text-color) !important;
+}
+
+.selected-publications strong {
+  color: var(--text-color) !important;
+}
+
+.selected-publications em {
+  color: var(--text-color) !important;
+}
+
