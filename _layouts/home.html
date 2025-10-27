@@ -117,6 +117,29 @@ ref: home
   text-align: center;
 }
 
+.author-toggle {
+  color: #888;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.author-toggle:hover {
+  color: #52adc8;
+}
+
+.author-list {
+  display: none;
+  margin-top: 0.3em;
+  font-size: 0.95em;
+  font-style: normal;
+  color: #555;
+}
+
+.author-list.show {
+  display: inline;
+}
+
 @media (prefers-color-scheme: dark) {
   .pub-highlight {
     background-color: rgba(255, 255, 255, 0.05);
@@ -157,7 +180,7 @@ ref: home
     <p class="pub-item">
       <span class="pub-number">10.</span>
       <span class="pub-content pub-highlight">
-        <strong><u>Haba Y</u></strong>*, PipPop Consortium, Korlević P, McAlister E, Lawniczak MKN, Schumer M, Rose NH, McBride CS*. (2025) <a href="https://doi.org/10.1126/science.ady4515" target="_blank">Ancient origin of an urban underground mosquito</a>. <strong><em>Science</em></strong> 390:eady4515
+        <strong><u>Haba Y</u></strong>*, PipPop Consortium <span class="author-toggle" onclick="toggleAuthors(this)">[show all authors]</span><span class="author-list">(Aardema ML, Afonso MO, Agramonte NM, Albright J, Alho AM, Almeida APG, Alout H, Alten B, Altinli M, Korba RA, Andreadis SS, Anghel V, Arich S, Arsenault-Benoit A, Atyame C, Aubry F, Avila FW, Ayala D, Azrag RS, Babayan L, Bear A, Becker N, Bega AG, Bejarano S, Ben-Avi I, Benoit JB, Boubidi SC, Bradshaw WE, Bravo-Barriga D, Bueno-Marí R, Bušić N, Čabanová V, Cabeje B, Caputo B, Cardo MV, Carpenter S, Carreton E, Chouaïbou MS, Christian M, Coetzee M, Conner WR, Cornel A, Culverwell CL, Cupina AI, De Wolf K, Deblauwe I, Deegan B, Delacour-Estrella S, della Torre A, Diaz D, Dool SE, dos Anjos VL, Dugassa S, Ebrahimi B, Eisa SYM, Elissa N, Fallatah SAB, Faraji A, Fedorova MV, Ferrill E, Fonseca DM, Foss KA, Foxi C, França CM, Fricker SR, Fritz ML, Frontera E, Fuehrer H-P, Futami K, Ghallab EHS, Girod R, Gordeev MI, Greer D, Gschwind M, Guarido MM, Guat Ney T, Gunay F, Haklay E, Hamad AAE, Hang J, Hardy CM, Hartle JW, Hesson JC, Higa Y, Holzapfel CM, Honnen A-C, Ionica AM, Jones L, Kadriaj P, Kamal HA, Kamdem C, Karagodin DA, Kasai S, Kavran M, Khater EIM, Kiene F, Kim H-C, Kioulos I, Klein A, Klemenčić M, Klobučar A, Knutson E, Koenraadt CJM, Kothera L, Kreienbühl P, Labbé P, Lachmi I, Lambrechts L, Landeka N, Lee CH, Lessard BD, Leycegui I, Lundström JO, Lustigman Y, MacIntyre C, Mackay AJ, Magori K, Maia C, Malcolm CA, Marquez R-JO, Martins D, Masri RA, McDivitt G, McMinn RJ, Medina J, Mellor KS, Mendoza J, Merdić E, Mesler S, Mestre C, Miranda H, Miterpáková M, Montarsi F, Moskaev AV, Mu T, Möhlmann TWR, Namias A, Ng'iru I, Ngangué MF, Novo MT, Orshan L, Oteo JA, Otsuka Y, Panarese R, Paredes-Esquivel C, Paronyan L, Peper ST, Petrić DV, Pilapil K, Pou-Barreto C, Puechmaille SJ, Radespiel U, Rahola N, Raman VK, Redouane H, Reiskind MH, Reissen NM, Rice BL, Robert V, Ruiz-Arrondo I, Salamat R, Salamone A, Sarih M, Satta G, Sawabe K, Schaffner F, Schultz KE, Shaikevich EV, Sharakhov IV, Sharakhova MV, Shatara N, Sibataev AK, Sicard M, Smith E, Smith RC, Smitz N, Soriano N, Spanoudis CG, Stone CM, Studentsky L, Sulesco T, Tantely LM, Thao LK, Tietze N, Tokarz RE, Tsai K-H, Tsuda Y, Turić N, Uhran MR, Unlu I, Van Bortel W, Vardanyan H, Vavassori L, Velo E, Venter M, Vignjević G, Vogels CBF, Volkava T, Vontas J, Ward HM, Wasi Ahmad N, Weill M, West JD, Wheeler SS, White GS, Wipf NC, Wu T-P, Yu K-D, Zimmermann E, Zittra C)</span>, Korlević P, McAlister E, Lawniczak MKN, Schumer M, Rose NH, McBride CS*. (2025) <a href="https://doi.org/10.1126/science.ady4515" target="_blank">Ancient origin of an urban underground mosquito</a>. <strong><em>Science</em></strong> 390:eady4515
         <span class="media-coverage">
           <em>Science</em> Perspective<br>
           Munshi-South J, Evankow A. <a href="https://www.science.org/doi/10.1126/science.aec1986" target="_blank">Urban pests traveled with ancient humans</a>.
@@ -251,3 +274,16 @@ ref: home
 <p class="cv-links">
   <a href="/assets/images/CV/Yuki Haba_CV.pdf" target="_blank">CV</a>&nbsp;|&nbsp;<a href="https://scholar.google.com/citations?hl=en&user=CtY4cz4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>&nbsp;|&nbsp;<a href="/bio_JP/">略歴(JP)</a>
 </p>
+
+<script>
+function toggleAuthors(element) {
+  const authorList = element.nextElementSibling;
+  if (authorList.classList.contains('show')) {
+    authorList.classList.remove('show');
+    element.textContent = '[show all authors]';
+  } else {
+    authorList.classList.add('show');
+    element.textContent = '[hide authors]';
+  }
+}
+</script>
