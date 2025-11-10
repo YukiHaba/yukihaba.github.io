@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "default" "air", "aqua", "contrast", "dar
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Yuki Haba"
+title                    : "Yuki Haba, Ph.D."
 title_separator          : " | "
-subtitle                 : "Evolution, Behavior, Genomics" # site tagline that appears below site title in masthead (just under the main title)
-name                     : "Yuki Haba"
+subtitle                 : ""
+name                     : "Yuki Haba, Ph.D."
 description              : "Yuki Haba's personal website, a biologist interested in the evolution of behavior using genomics and neurobiology"
 url                      : "https://yukihaba.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -104,7 +104,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Yuki Haba"
+  name             : "Yuki Haba, Ph.D."
   avatar           : "/assets/images/prof_pic_website.jpg" # path of avatar image, e.g. "/assets/images/prof_pic_website.jpg"
   bio              : "Leon Levy Scholar at Columbia Zuckerman Institute"
   location         : "🇺🇸🇯🇵"
@@ -128,6 +128,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/yuki-haba-0022a011b/"
+    - label: "略歴(JP)"
+      icon: "fas fa-fw fa-file-alt"
+      url: "/bio_JP/"
 
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
