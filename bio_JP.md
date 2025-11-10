@@ -35,7 +35,7 @@ author_profile: true
 
 <a href="https://digital.asahi.com/articles/ASTBQ0GGMTBQUTFL00BM.html" target="_blank">朝日新聞</a> | 
 <a href="https://www.nikkei.com/article/DGXZQOUC20AKT0Q5A021C2000000/" target="_blank">日本経済新聞</a> | 
-<a href="https://wired.jp/article/london-underground-mosquito-origin/" target="_blank">WIRED Japan</a><br>
+<a href="https://wired.jp/article/london-underground-mosquito-origin-egypt/" target="_blank">WIRED Japan</a><br>
 <a href="https://reskill.nikkei.com/article/DGXZQOLM163L60W5A011C2000000/" target="_blank">日経リスキリング</a> | 
 <a href="https://www.hiraokajuku.co.jp/core/wp-content/uploads/2018/12/a81845941ecd0ef321c4fd1bc6934fcb.pdf" target="_blank">日経マガジン教育/平岡塾</a> | 
 <a href="https://www.friendsofutokyo.org/ja/%E7%B1%B3%E5%9B%BD%E5%A4%A7%E5%AD%A6%E9%99%A2%E5%A5%AE%E9%97%98%E8%A8%98/" target="_blank">東大友の会</a>
