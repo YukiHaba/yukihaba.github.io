@@ -136,6 +136,39 @@ ref: home
   display: inline;
 }
 
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+}
+
+.award-item {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.award-title {
+  font-weight: 600;
+  color: inherit;
+}
+
+.award-org {
+  color: #666;
+  margin-left: 0.6em;
+}
+
+.award-year {
+  font-size: 1em;
+  color: inherit;
+  white-space: nowrap;
+  display: inline-block;
+  width: 5.8em;
+  font-variant-numeric: tabular-nums;
+}
+
 @media (prefers-color-scheme: dark) {
   .pub-highlight {
     background-color: rgba(255, 255, 255, 0.05);
@@ -154,6 +187,15 @@ ref: home
   .pub-item em,
   .pub-item u {
     color: inherit !important;
+  }
+  .award-title {
+    color: #efefef;
+  }
+  .award-org {
+    color: #b8b8b8;
+  }
+  .award-year {
+    color: inherit;
   }
 }
 </style>
@@ -264,6 +306,54 @@ ref: home
 </div>
 
 <!-- END: Publications section -->
+
+<hr style="border: none; height: 1px; background-color: #ddd; margin: 1em 0;">
+
+<div class="bio" style="margin-top: 1em; margin-bottom: 2em; font-size: 18px;">
+  <h3 style="font-size: 1.2em; margin-bottom: 0.8em; font-weight: 600;">Selected Awards &amp; Fellowships</h3>
+
+  <div class="awards-list">
+    <p class="award-item">
+      <span class="award-year">2025-2028</span> <span class="award-title">Leon Levy Scholarship in Neuroscience</span> <span class="award-org">The New York Academy of Sciences and Leon Levy Foundation</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2025</span> <span class="award-title">NY Hideyo Noguchi Memorial Scholarship</span> <span class="award-org">The New York Hideyo Noguchi Memorial Society</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2024</span> <span class="award-title">W.D. Hamilton Award, Runner-up</span> <span class="award-org">The Society for the Study of Evolution</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2022</span> <span class="award-title">PIIRS Dissertation Fellowship</span> <span class="award-org">Princeton Institute for International and Regional Studies</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2021</span> <span class="award-title">Walbridge Fund Graduate Award</span> <span class="award-org">High Meadows Environmental Institute</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2021</span> <span class="award-title">Best Talk Prize in Evolution</span> <span class="award-org">Princeton-Columbia-Yale-Penn-Rutgers Inter-School Symposium</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2020</span> <span class="award-title">Rosemary Grant Advanced Award</span> <span class="award-org">The Society for the Study of Evolution</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2019</span> <span class="award-title">Lewis and Clark Field Scholar</span> <span class="award-org">American Philosophical Society</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2018-2023</span> <span class="award-title">Honjo International Fellowship</span> <span class="award-org">Honjo International Scholarship Foundation</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2017-2022</span> <span class="award-title">Centennial Fellowship</span> <span class="award-org">Princeton University</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2017-2022</span> <span class="award-title">Masayoshi Son Fellowship</span> <span class="award-org">Masayoshi Son Foundation</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2017</span> <span class="award-title">Alfred Russel Wallace Prize for the best MA Thesis</span> <span class="award-org">Columbia University</span>
+    </p>
+    <p class="award-item">
+      <span class="award-year">2015</span> <span class="award-title">Global Leadership Award</span> <span class="award-org">Friends of University of Tokyo Inc.</span>
+    </p>
+  </div>
+</div>
 
 <hr style="border: none; height: 1px; background-color: #ddd; margin: 1em 0;">
 
