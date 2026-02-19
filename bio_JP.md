@@ -47,7 +47,7 @@ author_profile: true
 
 <div class="bioJP-content" style="text-align: center;">
 
-<a href="/assets/images/CV/Yuki Haba_CV.pdf" target="_blank">CV</a> | <a href="https://scholar.google.com/citations?user=CtY4cz4AAAAJ&hl=en" target="_blank">Publications</a>
+<a href="/assets/images/CV/Yuki Haba_CV.pdf" target="_blank">CV</a> | <a href="https://scholar.google.com/citations?hl=en&user=CtY4cz4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Publications</a>
 
 </div>
 

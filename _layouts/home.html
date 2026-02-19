@@ -140,31 +140,43 @@ ref: home
   display: flex;
   flex-direction: column;
   gap: 0.15em;
+  text-align: left;
 }
 
 .award-item {
   display: block;
+  position: relative;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 6.4em;
   line-height: 1.25;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: left;
 }
 
 .award-title {
   font-weight: 600;
   color: inherit;
+  text-align: left;
+  overflow-wrap: anywhere;
 }
 
 .award-org {
   color: #666;
-  margin-left: 0.6em;
+  display: block;
+  margin-left: 0;
+  margin-top: 0.1em;
+  text-align: left;
+  overflow-wrap: anywhere;
 }
 
 .award-year {
   font-size: 1em;
   color: inherit;
   white-space: nowrap;
-  display: inline-block;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 5.8em;
   font-variant-numeric: tabular-nums;
 }
@@ -310,7 +322,7 @@ ref: home
 <hr style="border: none; height: 1px; background-color: #ddd; margin: 1em 0;">
 
 <div class="bio" style="margin-top: 1em; margin-bottom: 2em; font-size: 18px;">
-  <h3 style="font-size: 1.2em; margin-bottom: 0.8em; font-weight: 600;">Selected Awards &amp; Fellowships</h3>
+  <h3 style="font-size: 1.2em; margin-bottom: 0.8em; font-weight: 600;">Awards and Honors</h3>
 
   <div class="awards-list">
     <p class="award-item">
@@ -329,7 +341,7 @@ ref: home
       <span class="award-year">2021</span> <span class="award-title">Walbridge Fund Graduate Award</span> <span class="award-org">High Meadows Environmental Institute</span>
     </p>
     <p class="award-item">
-      <span class="award-year">2021</span> <span class="award-title">Best Talk Prize in Evolution</span> <span class="award-org">Princeton-Columbia-Yale-Penn-Rutgers Inter-School Symposium</span>
+      <span class="award-year">2021</span> <span class="award-title">Best Talk Prize in Evolution</span> <span class="award-org">Princeton-Columbia-Yale-Penn-Rutgers Symposium</span>
     </p>
     <p class="award-item">
       <span class="award-year">2020</span> <span class="award-title">Rosemary Grant Advanced Award</span> <span class="award-org">The Society for the Study of Evolution</span>
@@ -347,7 +359,7 @@ ref: home
       <span class="award-year">2017-2022</span> <span class="award-title">Masayoshi Son Fellowship</span> <span class="award-org">Masayoshi Son Foundation</span>
     </p>
     <p class="award-item">
-      <span class="award-year">2017</span> <span class="award-title">Alfred Russel Wallace Prize for the best MA Thesis</span> <span class="award-org">Columbia University</span>
+      <span class="award-year">2017</span> <span class="award-title">Alfred Russel Wallace Prize for the Best MA Thesis</span> <span class="award-org">Columbia University</span>
     </p>
     <p class="award-item">
       <span class="award-year">2015</span> <span class="award-title">Global Leadership Award</span> <span class="award-org">Friends of University of Tokyo Inc.</span>

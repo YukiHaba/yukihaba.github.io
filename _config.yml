@@ -118,7 +118,7 @@ author:
       url: "https://yukihaba.github.io/"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=CtY4cz4AAAAJ&hl=en"
+      url: "https://scholar.google.com/citations?hl=en&user=CtY4cz4AAAAJ&view_op=list_works&sortby=pubdate"
     - label: "@yukihaba.bsky.social"
       url: "https://bsky.app/profile/yukihaba.bsky.social"
       icon: "fa-bluesky"
