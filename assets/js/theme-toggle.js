@@ -35,7 +35,7 @@
     // Style the button
     themeToggle.style.cssText = `
       position: fixed;
-      top: 20px;
+      bottom: 20px;
       right: 20px;
       z-index: 1000;
       background: var(--background-color, #fff);
