@@ -1,0 +1,496 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Dark mode variables and styles - now default */
+:root {
+  --background-color: #2b2b2b;
+  --text-color: #ffffff;
+  --primary-color: #64b5f6;
+  --border-color: #404040;
+  --link-color: #64b5f6;
+}
+
+/* Explicit dark mode styling (default) */
+html:not([data-theme]),
+html[data-theme="dark"] {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --primary-color: #64b5f6;
+  --border-color: #333333;
+  --link-color: #64b5f6;
+  
+  background-color: var(--background-color) !important;
+  color: var(--text-color);
+  
+  .masthead {
+    background-color: var(--background-color) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+  }
+  
+  .masthead__inner-wrap {
+    background-color: var(--background-color) !important;
+  }
+  
+  .site-title {
+    color: var(--text-color) !important;
+  }
+  
+  .site-title a {
+    color: var(--text-color) !important;
+  }
+  
+  .page__content {
+    background-color: var(--background-color) !important;
+    color: var(--text-color);
+  }
+  
+  .sidebar {
+    background-color: var(--background-color) !important;
+  }
+  
+  .author__avatar img {
+    border: 3px solid var(--border-color);
+  }
+  
+  .author__content {
+    color: var(--text-color);
+  }
+  
+  .author__name {
+    color: var(--text-color) !important;
+  }
+  
+  .author__name a {
+    color: var(--text-color) !important;
+  }
+  
+  .author__name a:hover {
+    color: var(--text-color) !important;
+    text-decoration: underline;
+  }
+  
+  .author__urls {
+    color: var(--text-color);
+    background-color: var(--background-color) !important;
+  }
+  
+  .author__urls-wrapper {
+    background-color: var(--background-color) !important;
+  }
+  
+  .author__urls a {
+    color: var(--link-color);
+  }
+  
+  .author__urls a:hover {
+    color: #90caf9;
+  }
+  
+  /* Fix dark icons in author profile */
+  .author__urls a i,
+  .author__urls a .fas,
+  .author__urls a .fab,
+  .author__urls li i {
+    color: var(--text-color) !important;
+  }
+  
+  /* Specific icon fixes for all FontAwesome icons */
+  .author__urls .fa-envelope-square,
+  .author__urls .fa-link,
+  .author__urls .fa-graduation-cap,
+  .author__urls .fa-twitter-square,
+  .author__urls .fa-linkedin,
+  .author__urls .fa-bluesky,
+  .author__urls [class*="fa-"] {
+    color: var(--text-color) !important;
+  }
+  
+  .bio h2, .CV h2, .Publications h2 {
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .bio p, .CV p, .Publications p {
+    color: var(--text-color) !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color) !important;
+    font-weight: bold;
+  }
+  
+  p {
+    color: var(--text-color) !important;
+  }
+  
+  .page__content p {
+    color: var(--text-color) !important;
+  }
+  
+  a {
+    color: var(--link-color);
+  }
+  
+  a:hover {
+    color: #90caf9;
+  }
+  
+  /* Footer styling for dark mode */
+  .page__footer {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+  }
+  
+  /* Navigation styling for dark mode */
+  .greedy-nav {
+    background: var(--background-color) !important;
+  }
+  
+  .greedy-nav a {
+    color: var(--text-color) !important;
+  }
+  
+  /* Fix for any remaining background inconsistencies */
+  .layout--single .page__related {
+    background-color: var(--background-color) !important;
+  }
+  
+  .page {
+    background-color: var(--background-color) !important;
+  }
+  
+  /* Theme toggle button styling for dark mode */
+  #theme-toggle {
+    background: var(--background-color) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+  }
+  
+  /* Dark mode logo change */
+  .site-logo img {
+    content: url('/assets/images/logo_B3.png') !important;
+  }
+}
+
+[data-theme="light"] {
+  --background-color: #fff;
+  --text-color: #333;
+  --primary-color: #7c4dff;
+  --border-color: #ccc;
+  --link-color: #7c4dff;
+}
+
+.fa-bluesky {
+    /* This tells the browser to treat the element as a block so we can set a width and height */
+    display: inline-block;
+    
+    /* Hide any text inside the element (if there is any) */
+    text-indent: -9999px;
+    overflow: hidden;
+    
+    /* Set the size of the icon */
+    width: 19px;
+    height: 19px;
+    
+    /* Set your custom image as the background */
+    background: url('/assets/images/Bluesky_Logo.png') no-repeat center center;
+    
+    /* Ensure the image scales correctly within the element */
+    background-size: contain;
+  }
+
+  /* Make Bluesky icon white in dark mode */
+  [data-theme="dark"] .fa-bluesky {
+    filter: brightness(0) invert(1);
+  }
+
+  /* Get rid of underline on the link and Add a hover effect to the icon */
+  a {
+    text-decoration: none;
+    // color: #1370da;
+  }
+  a:hover {
+    text-decoration: underline;
+    // color: #092ced;
+  }
+
+/* Mobile font size adjustments */
+@media (max-width: 768px) {
+  /* Main content sections */
+  .bio {
+    font-size: 14px !important; /* Reduced from 18px */
+  }
+  
+  .CV {
+    font-size: 14px !important; /* Reduced from 18px */
+  }
+  
+  .Publications {
+    font-size: 14px !important; /* Reduced from 18px */
+  }
+  
+  /* General mobile font sizes */
+  body {
+    font-size: 13px;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+  
+  /* Heading sizes for mobile */
+  h1 {
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-top: 0.8em;
+    margin-bottom: 0.4em;
+  }
+  
+  h3 {
+    font-size: 1.3em;
+    margin-top: 0.6em;
+    margin-bottom: 0.3em;
+  }
+  
+  /* Specific spacing for main sections */
+  .bio h2, .CV h2, .Publications h2 {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.3em !important;
+  }
+  
+  /* Reduce spacing between sections */
+  .bio, .CV, .Publications {
+    margin-bottom: 1em;
+  }
+  
+  /* Author profile text sizing */
+  .author__content {
+    font-size: 14px;
+  }
+  
+  .author__bio {
+    font-size: 14px;
+  }
+  
+  .author__name {
+    font-size: 14px !important;
+  }
+  
+  .author__name a {
+    font-size: 14px !important;
+  }
+}
+
+/* Desktop header spacing improvements */
+h1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+}
+
+h3 {
+  margin-top: 0.6em;
+  margin-bottom: 0.3em;
+}
+
+/* Specific spacing for main sections on desktop */
+.bio h2, .CV h2, .Publications h2 {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.3em !important;
+}
+
+/* Reduce spacing between sections on desktop */
+.bio, .CV, .Publications {
+  margin-bottom: 1.5em;
+}
+
+/* Minimalistic paper listing */
+.paper-list {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.paper-item {
+  margin-bottom: 1em;
+}
+
+.paper-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin-bottom: 0.3em;
+}
+
+.paper-number {
+  font-weight: normal;
+  margin-right: 0.5em;
+  min-width: 1.2em;
+}
+
+.paper-title {
+  font-weight: normal;
+  color: inherit;
+  flex-grow: 1;
+}
+
+.paper-details {
+  font-size: 0.95em;
+  margin-left: 1.7em; /* Align with title text, accounting for number */
+}
+
+/* Mobile adjustments for paper listings */
+@media (max-width: 768px) {
+  .paper-list {
+    margin-left: 1em;
+  }
+  
+  .paper-content {
+    gap: 0.5em;
+  }
+  
+  .paper-details {
+    font-size: 0.9em;
+    margin-left: 1.2em;
+  }
+}
+
+/* Japanese bio page styling - smaller font */
+.page[data-page="bio_JP"] .page__content,
+.page__content .bioJP-content {
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.bioJP-content {
+  margin-bottom: 1.2em !important;
+  text-align: left !important;
+}
+
+.bioJP-content:last-child {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+}
+
+.bioJP-content p {
+  margin-bottom: 1.5em !important;
+  text-indent: 0 !important;
+  margin-top: 0 !important;
+  text-align: left !important;
+}
+
+.bioJP-content h2 {
+  text-align: center !important;
+}
+
+.bioJP-content p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Smaller font for Japanese bio page on mobile and narrow desktop */
+@media (max-width: 1024px) {
+  .page[data-page="bio_JP"] .page__content,
+  .page__content .bioJP-content {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  .bioJP-content {
+    margin-bottom: 1em !important;
+  }
+  
+  .bioJP-content p {
+    margin-bottom: 1.2em !important;
+  }
+  
+  /* Hide header completely on mobile and narrow desktop */
+  .masthead {
+    display: none !important;
+  }
+  
+  /* Bigger profile picture and name on mobile and narrow desktop */
+  .author__avatar img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .author__name {
+    font-size: 2em !important;
+    margin-bottom: 0.5em !important;
+  }
+  
+  /* More specific selectors for the name */
+  .author__name.p-name,
+  .author__content .author__name,
+  h3.author__name {
+    font-size: 1.5em !important;
+    margin-bottom: 0.5em !important;
+    margin-top: 0.8em !important;
+  }
+  
+  .author__name a {
+    font-size: inherit !important;
+  }
+  
+  /* Make all social media icons bigger on mobile/narrow screens */
+  .author__urls li {
+    font-size: 1em !important;
+  }
+  
+  .author__urls a i,
+  .author__urls a .fas,
+  .author__urls a .fab {
+    font-size: 1.1em !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+  
+  /* Adjust Bluesky icon to match other icons */
+  .fa-bluesky {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 1.1em !important;
+  }
+  
+  .author__urls .label {
+    font-size: 1em !important;
+  }
+}
+
+/* Selected Publications styling */
+.selected-publications .pub-item {
+  color: var(--text-color) !important;
+}
+
+.selected-publications .pub-content {
+  color: var(--text-color) !important;
+}
+
+.selected-publications strong {
+  color: var(--text-color) !important;
+}
+
+.selected-publications em {
+  color: var(--text-color) !important;
+}
+
