@@ -1,9 +1,0 @@
-# main links
-main:
-  - title: "CV"
-    url: "/assets/images/CV/Yuki Haba_CV.pdf"
-    target: "_blank"
-  - title: "Publications"
-    url: "/#publications-section"
-  - title: "略歴(JP)"
-    url: "/bio_JP/"

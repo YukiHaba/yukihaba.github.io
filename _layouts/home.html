@@ -155,7 +155,7 @@ ref: home
 
 .award-title {
   font-weight: 600;
-  color: inherit;
+  color: #222;
   text-align: left;
   overflow-wrap: anywhere;
 }
@@ -181,6 +181,18 @@ ref: home
   font-variant-numeric: tabular-nums;
 }
 
+html[data-theme="dark"] .award-title {
+  color: #efefef;
+}
+
+html[data-theme="dark"] .award-org {
+  color: #b8b8b8;
+}
+
+html[data-theme="dark"] .award-year {
+  color: inherit;
+}
+
 @media (prefers-color-scheme: dark) {
   .pub-highlight {
     background-color: rgba(255, 255, 255, 0.05);
@@ -199,15 +211,6 @@ ref: home
   .pub-item em,
   .pub-item u {
     color: inherit !important;
-  }
-  .award-title {
-    color: #efefef;
-  }
-  .award-org {
-    color: #b8b8b8;
-  }
-  .award-year {
-    color: inherit;
   }
 }
 </style>
