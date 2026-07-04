@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "CV"
-    url: "/assets/images/CV/Yuki Haba_CV.pdf"
+    url: "/assets/images/CV/Yuki_Haba_CV.pdf"
     target: "_blank"
   - title: "Publications"
     url: "/#publications-section"

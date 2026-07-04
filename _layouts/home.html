@@ -103,6 +103,23 @@ ref: home
   flex-grow: 1;
 }
 
+.pub-preview {
+  display: none;
+}
+
+.pub-text {
+  display: contents;
+}
+
+.pub-preview img {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+
 .media-coverage {
   display: block;
   font-size: 0.9em;
@@ -134,6 +151,81 @@ ref: home
 
 .author-list.show {
   display: inline;
+}
+
+@media (min-width: 1380px) {
+  .publications-section {
+    position: relative;
+  }
+
+  .pub-item.has-preview {
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .pub-item.has-preview .pub-highlight {
+    display: block;
+    position: relative;
+    margin-right: -250px;
+    padding: 0;
+    padding-right: 250px;
+    background-color: transparent;
+    border-left: 0;
+  }
+
+  .pub-item.has-preview .pub-preview {
+    display: block;
+    position: absolute;
+    right: 18px;
+    width: 220px;
+    padding: 0.45em;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-decoration: none;
+    z-index: 2;
+  }
+
+  .pub-item.has-preview .pub-text {
+    display: block;
+    position: relative;
+    isolation: isolate;
+    margin-left: -0.5em;
+    padding: 0.5em;
+    border-left: 3px solid #52adc8;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .pub-item.has-preview .pub-text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px 0 0 4px;
+  }
+
+  .pub-preview--center {
+    bottom: 0;
+  }
+
+  .pub-preview--bottom {
+    bottom: 0;
+  }
+
+  .pub-preview--top {
+    top: 0;
+  }
+
+  .pub-item.has-preview .pub-preview::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -12px;
+    width: 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 }
 
 .awards-list {
@@ -193,6 +285,14 @@ html[data-theme="dark"] .award-year {
   color: inherit;
 }
 
+html[data-theme="dark"] .pub-highlight,
+html[data-theme="dark"] .pub-item.has-preview .pub-text::before,
+html[data-theme="dark"] .pub-item.has-preview .pub-preview,
+html[data-theme="dark"] .pub-item.has-preview .pub-preview::before,
+html[data-theme="dark"] .pub-legend-box {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
 @media (prefers-color-scheme: dark) {
   .pub-highlight {
     background-color: rgba(255, 255, 255, 0.05);
@@ -213,11 +313,18 @@ html[data-theme="dark"] .award-year {
     color: inherit !important;
   }
 }
+
+@media (min-width: 1380px) {
+  html[data-theme="dark"] .pub-item.has-preview .pub-highlight,
+  .pub-item.has-preview .pub-highlight {
+    background-color: transparent;
+  }
+}
 </style>
 
 <!-- Publications Section -->
 
-<div class="bio" style="margin-top: 1em; margin-bottom: 2em; font-size: 18px;">
+<div class="bio publications-section" style="margin-top: 1em; margin-bottom: 2em; font-size: 18px;">
   <h3 style="font-size: 1.2em; margin-bottom: 1em; font-weight: 600;">
     Publications
     <span class="pub-legend">
@@ -229,10 +336,11 @@ html[data-theme="dark"] .award-year {
 
   <div style="line-height: 1.6;">
     <!-- 2025 Publications -->
-    <p class="pub-item">
+    <p class="pub-item has-preview">
       <span class="pub-number">10.</span>
       <span class="pub-content pub-highlight">
-        <strong><u>Haba Y</u></strong>*, PipPop Consortium <span class="author-toggle" onclick="toggleAuthors(this)">[show all authors]</span><span class="author-list">(Aardema ML, Afonso MO, Agramonte NM, Albright J, Alho AM, Almeida APG, Alout H, Alten B, Altinli M, Korba RA, Andreadis SS, Anghel V, Arich S, Arsenault-Benoit A, Atyame C, Aubry F, Avila FW, Ayala D, Azrag RS, Babayan L, Bear A, Becker N, Bega AG, Bejarano S, Ben-Avi I, Benoit JB, Boubidi SC, Bradshaw WE, Bravo-Barriga D, Bueno-Marí R, Bušić N, Čabanová V, Cabeje B, Caputo B, Cardo MV, Carpenter S, Carreton E, Chouaïbou MS, Christian M, Coetzee M, Conner WR, Cornel A, Culverwell CL, Cupina AI, De Wolf K, Deblauwe I, Deegan B, Delacour-Estrella S, della Torre A, Diaz D, Dool SE, dos Anjos VL, Dugassa S, Ebrahimi B, Eisa SYM, Elissa N, Fallatah SAB, Faraji A, Fedorova MV, Ferrill E, Fonseca DM, Foss KA, Foxi C, França CM, Fricker SR, Fritz ML, Frontera E, Fuehrer H-P, Futami K, Ghallab EHS, Girod R, Gordeev MI, Greer D, Gschwind M, Guarido MM, Guat Ney T, Gunay F, Haklay E, Hamad AAE, Hang J, Hardy CM, Hartle JW, Hesson JC, Higa Y, Holzapfel CM, Honnen A-C, Ionica AM, Jones L, Kadriaj P, Kamal HA, Kamdem C, Karagodin DA, Kasai S, Kavran M, Khater EIM, Kiene F, Kim H-C, Kioulos I, Klein A, Klemenčić M, Klobučar A, Knutson E, Koenraadt CJM, Kothera L, Kreienbühl P, Labbé P, Lachmi I, Lambrechts L, Landeka N, Lee CH, Lessard BD, Leycegui I, Lundström JO, Lustigman Y, MacIntyre C, Mackay AJ, Magori K, Maia C, Malcolm CA, Marquez R-JO, Martins D, Masri RA, McDivitt G, McMinn RJ, Medina J, Mellor KS, Mendoza J, Merdić E, Mesler S, Mestre C, Miranda H, Miterpáková M, Montarsi F, Moskaev AV, Mu T, Möhlmann TWR, Namias A, Ng'iru I, Ngangué MF, Novo MT, Orshan L, Oteo JA, Otsuka Y, Panarese R, Paredes-Esquivel C, Paronyan L, Peper ST, Petrić DV, Pilapil K, Pou-Barreto C, Puechmaille SJ, Radespiel U, Rahola N, Raman VK, Redouane H, Reiskind MH, Reissen NM, Rice BL, Robert V, Ruiz-Arrondo I, Salamat R, Salamone A, Sarih M, Satta G, Sawabe K, Schaffner F, Schultz KE, Shaikevich EV, Sharakhov IV, Sharakhova MV, Shatara N, Sibataev AK, Sicard M, Smith E, Smith RC, Smitz N, Soriano N, Spanoudis CG, Stone CM, Studentsky L, Sulesco T, Tantely LM, Thao LK, Tietze N, Tokarz RE, Tsai K-H, Tsuda Y, Turić N, Uhran MR, Unlu I, Van Bortel W, Vardanyan H, Vavassori L, Velo E, Venter M, Vignjević G, Vogels CBF, Volkava T, Vontas J, Ward HM, Wasi Ahmad N, Weill M, West JD, Wheeler SS, White GS, Wipf NC, Wu T-P, Yu K-D, Zimmermann E, Zittra C)</span>, Korlević P, McAlister E, Lawniczak MKN, Schumer M, Rose NH, McBride CS*. (2025) <a href="https://doi.org/10.1126/science.ady4515" target="_blank">Ancient origin of an urban underground mosquito</a>. <strong><em>Science</em></strong> [<a href="/assets/images/pdfs/Haba%202025%20Science.pdf" target="_blank">pdf</a>]
+        <span class="pub-text">
+        <strong><u>Haba Y</u></strong>*, PipPop Consortium <span class="author-toggle" onclick="toggleAuthors(this)">[show all authors]</span><span class="author-list">(Aardema ML, Afonso MO, Agramonte NM, Albright J, Alho AM, Almeida APG, Alout H, Alten B, Altinli M, Korba RA, Andreadis SS, Anghel V, Arich S, Arsenault-Benoit A, Atyame C, Aubry F, Avila FW, Ayala D, Azrag RS, Babayan L, Bear A, Becker N, Bega AG, Bejarano S, Ben-Avi I, Benoit JB, Boubidi SC, Bradshaw WE, Bravo-Barriga D, Bueno-Marí R, Bušić N, Čabanová V, Cabeje B, Caputo B, Cardo MV, Carpenter S, Carreton E, Chouaïbou MS, Christian M, Coetzee M, Conner WR, Cornel A, Culverwell CL, Cupina AI, De Wolf K, Deblauwe I, Deegan B, Delacour-Estrella S, della Torre A, Diaz D, Dool SE, dos Anjos VL, Dugassa S, Ebrahimi B, Eisa SYM, Elissa N, Fallatah SAB, Faraji A, Fedorova MV, Ferrill E, Fonseca DM, Foss KA, Foxi C, França CM, Fricker SR, Fritz ML, Frontera E, Fuehrer H-P, Futami K, Ghallab EHS, Girod R, Gordeev MI, Greer D, Gschwind M, Guarido MM, Guat Ney T, Gunay F, Haklay E, Hamad AAE, Hang J, Hardy CM, Hartle JW, Hesson JC, Higa Y, Holzapfel CM, Honnen A-C, Ionica AM, Jones L, Kadriaj P, Kamal HA, Kamdem C, Karagodin DA, Kasai S, Kavran M, Khater EIM, Kiene F, Kim H-C, Kioulos I, Klein A, Klemenčić M, Klobučar A, Knutson E, Koenraadt CJM, Kothera L, Kreienbühl P, Labbé P, Lachmi I, Lambrechts L, Landeka N, Lee CH, Lessard BD, Leycegui I, Lundström JO, Lustigman Y, MacIntyre C, Mackay AJ, Magori K, Maia C, Malcolm CA, Marquez R-JO, Martins D, Masri RA, McDivitt G, McMinn RJ, Medina J, Mellor KS, Mendoza J, Merdić E, Mesler S, Mestre C, Miranda H, Miterpáková M, Montarsi F, Moskaev AV, Mu T, Möhlmann TWR, Namias A, Ng'iru I, Ngangué MF, Novo MT, Orshan L, Oteo JA, Otsuka Y, Panarese R, Paredes-Esquivel C, Paronyan L, Peper ST, Petrić DV, Pilapil K, Pou-Barreto C, Puechmaille SJ, Radespiel U, Rahola N, Raman VK, Redouane H, Reiskind MH, Reissen NM, Rice BL, Robert V, Ruiz-Arrondo I, Salamat R, Salamone A, Sarih M, Satta G, Sawabe K, Schaffner F, Schultz KE, Shaikevich EV, Sharakhov IV, Sharakhova MV, Shatara N, Sibataev AK, Sicard M, Smith E, Smith RC, Smitz N, Soriano N, Spanoudis CG, Stone CM, Studentsky L, Sulesco T, Tantely LM, Thao LK, Tietze N, Tokarz RE, Tsai K-H, Tsuda Y, Turić N, Uhran MR, Unlu I, Van Bortel W, Vardanyan H, Vavassori L, Velo E, Venter M, Vignjević G, Vogels CBF, Volkava T, Vontas J, Ward HM, Wasi Ahmad N, Weill M, West JD, Wheeler SS, White GS, Wipf NC, Wu T-P, Yu K-D, Zimmermann E, Zittra C)</span>, Korlević P, McAlister E, Lawniczak MKN, Schumer M, Rose NH, McBride CS*. (2025) <a href="https://doi.org/10.1126/science.ady4515" target="_blank">Ancient origin of an urban underground mosquito</a>. <strong><em>Science</em></strong> [<a href="/assets/images/pdfs/Haba_2025_Science.pdf" target="_blank">pdf</a>]
         <span class="media-coverage">
           <em>Science</em> Perspective<br>
           Munshi-South J, Evankow A. <a href="https://www.science.org/doi/10.1126/science.aec1986" target="_blank">Urban pests traveled with ancient humans</a>.
@@ -247,13 +355,17 @@ html[data-theme="dark"] .award-year {
           <a href="https://www.newscientist.com/article/2467210-london-underground-mutant-mosquitoes-have-surprisingly-ancient-origins/" target="_blank">New Scientist</a> | 
           <a href="https://www.sciencenews.org/article/subway-mosquitoes-ancient-mediterranean" target="_blank">ScienceNews</a>
         </span>
+        </span>
+        <a class="pub-preview pub-preview--center" href="/assets/images/pdfs/Haba_2025_Science.pdf" target="_blank" aria-label="Open Science paper PDF">
+          <img src="/assets/images/pub-previews/Haba_2025_Science.png" alt="First page of Haba 2025 Science paper">
+        </a>
       </span>
     </p>
 
     <p class="pub-item">
       <span class="pub-number">9.</span>
       <span class="pub-content">
-        Hesson J, <strong><u>Haba Y</u></strong>, McBride CS, …, Makunin A. (2025) <a href="https://wellcomeopenresearch.org/articles/10-107" target="_blank">A chromosomal reference genome sequence for the northern house mosquito, <em>Culex pipiens</em>, Linnaeus, 1758</a>. <strong><em>Wellcome Open Research</em></strong> [<a href="/assets/images/pdfs/Hesson%202025%20Wel%20Open%20Res.pdf" target="_blank">pdf</a>]
+        Hesson J, <strong><u>Haba Y</u></strong>, McBride CS, …, Makunin A. (2025) <a href="https://wellcomeopenresearch.org/articles/10-107" target="_blank">A chromosomal reference genome sequence for the northern house mosquito, <em>Culex pipiens</em>, Linnaeus, 1758</a>. <strong><em>Wellcome Open Research</em></strong> [<a href="/assets/images/pdfs/Hesson_2025_Wel_Open_Res.pdf" target="_blank">pdf</a>]
       </span>
     </p>
 
@@ -261,14 +373,14 @@ html[data-theme="dark"] .award-year {
     <p class="pub-item">
       <span class="pub-number">8.</span>
       <span class="pub-content">
-        Yang Q, Wang B, Lemey P, … <strong><u>Haba Y</u></strong>, …, Grenfell B. (2024) <a href="https://www.nature.com/articles/s41467-024-45462-1" target="_blank">Synchrony of Bird Migration with Global Dispersal of Avian Influenza Reveals Exposed Bird Orders</a>. <strong><em>Nature Communications</em></strong> [<a href="/assets/images/pdfs/Yang%202024%20Nature%20Comm.pdf" target="_blank">pdf</a>]
+        Yang Q, Wang B, Lemey P, … <strong><u>Haba Y</u></strong>, …, Grenfell B. (2024) <a href="https://www.nature.com/articles/s41467-024-45462-1" target="_blank">Synchrony of Bird Migration with Global Dispersal of Avian Influenza Reveals Exposed Bird Orders</a>. <strong><em>Nature Communications</em></strong> [<a href="/assets/images/pdfs/Yang_2024_Nature_Comm.pdf" target="_blank">pdf</a>]
       </span>
     </p>
 
     <p class="pub-item">
       <span class="pub-number">7.</span>
       <span class="pub-content">
-        Ryazansky SS, Chen C, …, <strong><u>Haba Y</u></strong>, …, Sharakhova MV. (2024) <a href="https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-024-01825-0" target="_blank">The chromosome-scale genome assembly for the West Nile vector <em>Culex quinquefasciatus</em> uncovers patterns of genome evolution in mosquitoes</a>. <strong><em>BMC Biology</em></strong> [<a href="/assets/images/pdfs/Ryazansky%202024%20BMC%20Biol.pdf" target="_blank">pdf</a>]
+        Ryazansky SS, Chen C, …, <strong><u>Haba Y</u></strong>, …, Sharakhova MV. (2024) <a href="https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-024-01825-0" target="_blank">The chromosome-scale genome assembly for the West Nile vector <em>Culex quinquefasciatus</em> uncovers patterns of genome evolution in mosquitoes</a>. <strong><em>BMC Biology</em></strong> [<a href="/assets/images/pdfs/Ryazansky_2024_BMC_Biol.pdf" target="_blank">pdf</a>]
       </span>
     </p>
 
@@ -276,29 +388,39 @@ html[data-theme="dark"] .award-year {
     <p class="pub-item">
       <span class="pub-number">6.</span>
       <span class="pub-content">
-        Arich S, <strong><u>Haba Y</u></strong>, Assaid N, Fritz ML, McBride CS, Weill M, Taki H, Sarih M, Labbé P. (2022) <a href="https://parasitesandvectors.biomedcentral.com/articles/10.1186/s13071-022-05469-3" target="_blank">No association between habitat, autogeny, and genetics in Moroccan <em>Culex pipiens</em> populations</a>. <strong><em>Parasites & Vectors</em></strong> [<a href="/assets/images/pdfs/Arich%202022%20Paras%20Vect.pdf" target="_blank">pdf</a>]
+        Arich S, <strong><u>Haba Y</u></strong>, Assaid N, Fritz ML, McBride CS, Weill M, Taki H, Sarih M, Labbé P. (2022) <a href="https://parasitesandvectors.biomedcentral.com/articles/10.1186/s13071-022-05469-3" target="_blank">No association between habitat, autogeny, and genetics in Moroccan <em>Culex pipiens</em> populations</a>. <strong><em>Parasites & Vectors</em></strong> [<a href="/assets/images/pdfs/Arich_2022_Paras_Vect.pdf" target="_blank">pdf</a>]
       </span>
     </p>
 
-    <p class="pub-item">
+    <p class="pub-item has-preview">
       <span class="pub-number">5.</span>
       <span class="pub-content pub-highlight">
-        <strong><u>Haba Y</u></strong>*, McBride CS*. (2022) <a href="https://doi.org/10.1016/j.cub.2022.01.062" target="_blank">Origin and status of <em>Culex pipiens</em> mosquito ecotypes</a>. <strong><em>Current Biology</em></strong> [<a href="/assets/images/pdfs/Haba%20and%20McBride%202022%20Curr%20Biol.pdf" target="_blank">pdf</a>]
+        <span class="pub-text">
+        <strong><u>Haba Y</u></strong>*, McBride CS*. (2022) <a href="https://doi.org/10.1016/j.cub.2022.01.062" target="_blank">Origin and status of <em>Culex pipiens</em> mosquito ecotypes</a>. <strong><em>Current Biology</em></strong> [<a href="/assets/images/pdfs/Haba_and_McBride_2022_Curr_Biol.pdf" target="_blank">pdf</a>]
+        </span>
+        <a class="pub-preview pub-preview--bottom" href="/assets/images/pdfs/Haba_and_McBride_2022_Curr_Biol.pdf" target="_blank" aria-label="Open Current Biology paper PDF">
+          <img src="/assets/images/pub-previews/Haba_and_McBride_2022_Curr_Biol.png" alt="First page of Haba and McBride 2022 Current Biology paper">
+        </a>
       </span>
     </p>
 
     <!-- 2019 Publications -->
-    <p class="pub-item">
+    <p class="pub-item has-preview">
       <span class="pub-number">4.</span>
       <span class="pub-content pub-highlight">
-        <strong><u>Haba Y</u></strong>*, Kutsukake N*. (2019) <a href="https://doi.org/10.1007/s10682-019-10011-6" target="_blank">A multivariate phylogenetic comparative method incorporating a flexible function between discrete and continuous traits</a>. <strong><em>Evolutionary Ecology</em></strong> [<a href="/assets/images/pdfs/Haba%202019%20Evol%20Ecol.pdf" target="_blank">pdf</a>]
+        <span class="pub-text">
+        <strong><u>Haba Y</u></strong>*, Kutsukake N*. (2019) <a href="https://doi.org/10.1007/s10682-019-10011-6" target="_blank">A multivariate phylogenetic comparative method incorporating a flexible function between discrete and continuous traits</a>. <strong><em>Evolutionary Ecology</em></strong> [<a href="/assets/images/pdfs/Haba_2019_Evol_Ecol.pdf" target="_blank">pdf</a>]
+        </span>
+        <a class="pub-preview pub-preview--top" href="/assets/images/pdfs/Haba_2019_Evol_Ecol.pdf" target="_blank" aria-label="Open Evolutionary Ecology paper PDF">
+          <img src="/assets/images/pub-previews/Haba_2019_Evol_Ecol.png" alt="First page of Haba 2019 Evolutionary Ecology paper">
+        </a>
       </span>
     </p>
 
     <p class="pub-item">
       <span class="pub-number">3.</span>
-      <span class="pub-content pub-highlight">
-        <strong><u>Haba Y</u></strong>*<span class="small-plus">+</span>, Herbert R<span class="small-plus">+</span>, Yang L<span class="small-plus">+</span>. (2019) <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/aje.12627" target="_blank">An undescribed relationship between the knobthorn tree (<em>Senegalia nigrescens</em>), ants, and a lac scale insect in South Africa</a>. <strong><em>African Journal of Ecology</em></strong> [<a href="/assets/images/pdfs/Haba%202019%20African%20Journal%20of%20Ecology.pdf" target="_blank">pdf</a>]
+      <span class="pub-content">
+        <strong><u>Haba Y</u></strong>*<span class="small-plus">+</span>, Herbert R<span class="small-plus">+</span>, Yang L<span class="small-plus">+</span>. (2019) <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/aje.12627" target="_blank">An undescribed relationship between the knobthorn tree (<em>Senegalia nigrescens</em>), ants, and a lac scale insect in South Africa</a>. <strong><em>African Journal of Ecology</em></strong> [<a href="/assets/images/pdfs/Haba_2019_African_Journal_of_Ecology.pdf" target="_blank">pdf</a>]
       </span>
     </p>
 
@@ -314,7 +436,7 @@ html[data-theme="dark"] .award-year {
     <p class="pub-item" style="margin-bottom: 0;">
       <span class="pub-number">1.</span>
       <span class="pub-content">
-        Baker Z<span class="small-plus">+</span>, Schumer M<span class="small-plus">+</span>, <strong><u>Haba Y</u></strong>, Holland C, Rosenthal GG, Przeworski M. (2017) <a href="https://doi.org/10.7554/eLife.24133" target="_blank">Repeated losses of PRDM9-directed recombination despite the conservation of PRDM9 across vertebrates</a>. <strong><em>eLife</em></strong> [<a href="/assets/images/pdfs/Barker%202017%20eLife.pdf" target="_blank">pdf</a>]
+        Baker Z<span class="small-plus">+</span>, Schumer M<span class="small-plus">+</span>, <strong><u>Haba Y</u></strong>, Holland C, Rosenthal GG, Przeworski M. (2017) <a href="https://doi.org/10.7554/eLife.24133" target="_blank">Repeated losses of PRDM9-directed recombination despite the conservation of PRDM9 across vertebrates</a>. <strong><em>eLife</em></strong> [<a href="/assets/images/pdfs/Barker_2017_eLife.pdf" target="_blank">pdf</a>]
       </span>
     </p>
   </div>
@@ -325,7 +447,7 @@ html[data-theme="dark"] .award-year {
 <hr style="border: none; height: 1px; background-color: #ddd; margin: 1em 0;">
 
 <div class="bio" style="margin-top: 1em; margin-bottom: 2em; font-size: 18px;">
-  <h3 style="font-size: 1.2em; margin-bottom: 0.8em; font-weight: 600;">Awards and Honors</h3>
+  <h3 style="font-size: 1.2em; margin-bottom: 0.8em; font-weight: 600;">Selected Awards and Honors</h3>
 
   <div class="awards-list">
     <p class="award-item">
@@ -376,7 +498,7 @@ html[data-theme="dark"] .award-year {
 <hr style="border: none; height: 1px; background-color: #ddd; margin: 1em 0;">
 
 <p class="cv-links">
-  <a href="/assets/images/CV/Yuki Haba_CV.pdf" target="_blank">CV</a>&nbsp;|&nbsp;<a href="https://scholar.google.com/citations?hl=en&user=CtY4cz4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>&nbsp;|&nbsp;<a href="/bio_JP/">略歴(JP)</a>
+  <a href="/assets/images/CV/Yuki_Haba_CV.pdf" target="_blank">CV</a>&nbsp;|&nbsp;<a href="https://scholar.google.com/citations?hl=en&user=CtY4cz4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>&nbsp;|&nbsp;<a href="/bio_JP/">略歴(JP)</a>
 </p>
 
 <script>
